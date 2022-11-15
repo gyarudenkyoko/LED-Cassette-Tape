@@ -7,13 +7,17 @@ https://www.arduino.cc/en/software
 FastLED
 https://github.com/FastLED/FastLED
 
-FastLED色指定
+##Digisparkのボード設定
+http://digistump.com/wiki/digispark/tutorials/connecting
+
+##FastLED色指定
 http://fastled.io/docs/3.1/struct_c_r_g_b.html
 
-コンパイルしたときに#include EEPROM.hの部分にエラーが出る場合は下記リンクを開いて
-https://github.com/digistump/DigistumpArduino/issues/34
-ページ内のEEPRPM.zipをダウンロードして、ArduinoIDEのスケッチ→ライブラリをインクルード
-→zip形式のライブラリをインストールでEEPRPMをインストールしてからコンパイルする
+##WEBカラーコード
+https://www.colordic.org/
+例：fuchsia #ff00ff　で光らせたい場合
+#ff00ff →　ff 00 ff　二文字ずつに分けてそれぞれ頭に0x（ゼロエックス）をつけてカンマで区切る 
+0xff,0x00,0xff
 
 ##わからないことがあったときの調べ方
 やりたいことを区切って検索する。検索結果がいまいちな時は、単語を翻訳ツールとかで英語に翻訳して検索する。
@@ -27,9 +31,12 @@ Fastled サンプルコード
 WS2812　arduino ○○できない
 
 ##コード何回見直しても間違えてないっぽいのにエラーが出てコンパイルできない時
-
 全角のスペースがコメントアウト部分以外に入っていたり、プログラムで必要な記号（特に末尾のセミコロン;とかコピペで最後の}をコピーし忘れてないか
 確認する。そういうときはだいたい下のエラーが出るからいったんお茶とか飲んで落ち着いてから探すといいよ。
 exit status 1
 stray '\343' in program
 
+###コンパイルしたときに#include EEPROM.hの部分にエラーが出る場合は下記リンクを開いて
+https://github.com/digistump/DigistumpArduino/issues/34
+ページ内のEEPRPM.zipをダウンロードして、ArduinoIDEのスケッチ→ライブラリをインクルード
+→zip形式のライブラリをインストールでEEPRPMをインストールしてからコンパイルする
